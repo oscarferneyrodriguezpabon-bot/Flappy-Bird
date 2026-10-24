@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://dudu47tvdgea4"]
+
+[ext_resource type="Texture2D" uid="uid://bm1ccwhto81jx" path="res://assets/ave-re.png" id="2_cvhml"]
+[ext_resource type="Texture2D" uid="uid://c23sf0x74ros8" path="res://assets/Muerte pajaro.png" id="9_xwd11"]
+[ext_resource type="AudioStream" uid="uid://cuk66ay382aev" path="res://assets/aleteo.wav" id="a0"]
+[ext_resource type="AudioStream" uid="uid://bq2j52os6d5vb" path="res://assets/golpe.wav" id="a1"]
+[ext_resource type="Script" uid="uid://b5g5u2trocqt7" path="res://jugador.gd" id="s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btb33"]
+atlas = ExtResource("2_cvhml")
+region = Rect2(0, 0, 108, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qw2bf"]
+atlas = ExtResource("2_cvhml")
+region = Rect2(108, 0, 108, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5h5a"]
+atlas = ExtResource("2_cvhml")
+region = Rect2(216, 0, 108, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2m60"]
+atlas = ExtResource("2_cvhml")
+region = Rect2(324, 0, 108, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpxwk"]
+atlas = ExtResource("9_xwd11")
+region = Rect2(216, 0, 108, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e6m2u"]
+atlas = ExtResource("9_xwd11")
+region = Rect2(324, 0, 108, 115)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7st5j"]
+atlas = ExtResource("2_cvhml")
+region = Rect2(0, 0, 108, 90)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_A0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btb33")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qw2bf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5h5a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2m60")
+}],
+"loop": 0,
+"name": &"aletear",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpxwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e6m2u")
+}],
+"loop": 0,
+"name": &"morir",
+"speed": 30.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7st5j")
+}],
+"loop": 0,
+"name": &"planear",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="Forma"]
+radius = 27.018513
+
+[node name="Pajaro" type="CharacterBody2D" unique_id=1670058632]
+script = ExtResource("s")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=666586476]
+position = Vector2(-0.5000042, -0.50000095)
+scale = Vector2(0.8611111, 0.8555556)
+sprite_frames = SubResource("SpriteFrames_A0")
+animation = &"morir"
+
+[node name="Aleteo" type="AudioStreamPlayer2D" parent="." unique_id=611385521]
+stream = ExtResource("a0")
+
+[node name="Golpe" type="AudioStreamPlayer" parent="." unique_id=1098825617]
+stream = ExtResource("a1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1520542393]
+shape = SubResource("Forma")

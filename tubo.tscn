@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cao0vt8cscqha"]
+
+[ext_resource type="Texture2D" uid="uid://cj0ixff1a25aw" path="res://assets/tubo.png" id="1_prjnf"]
+
+[sub_resource type="RectangleShape2D" id="Forma"]
+size = Vector2(64, 107.5)
+
+[node name="Tubo" type="Area2D" unique_id=811378713 groups=["enemigos"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2060543626]
+modulate = Color(0.48598236, 0.22370142, 0.14832494, 1)
+position = Vector2(22, -9.499996)
+scale = Vector2(0.3333333, 0.21428572)
+texture = ExtResource("1_prjnf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=948824846]
+position = Vector2(20, -9.25)
+shape = SubResource("Forma")

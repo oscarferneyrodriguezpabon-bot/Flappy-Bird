@@ -1,0 +1,5 @@
+Base del Taller 4 — Flappy Bird, para repartir a los estudiantes del equipo.
+
+Ábranlo con Godot 4.7: Import → elegir project.godot → Import & Edit. La escena principal es
+mundo.tscn (F5). Si ya tienen su propio proyecto con el taller anterior terminado, pueden seguir en el
+suyo: copien la carpeta assets/ y lo que pida la guía.

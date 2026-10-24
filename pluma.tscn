@@ -1,0 +1,14 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://assets/pluma.png" id="1"]
+
+[sub_resource type="CircleShape2D" id="Forma"]
+radius = 14
+
+[node name="Pluma" type="Area2D" groups=["monedas"]]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("Forma")

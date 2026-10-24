@@ -1,0 +1,11 @@
+# Godot 4+ specific ignores
+.godot/
+
+# Godot 3 specific ignores
+.import/
+export.cfg
+export_presets.cfg
+
+# SonarLint / IDE specific files
+.vscode/
+.idea/

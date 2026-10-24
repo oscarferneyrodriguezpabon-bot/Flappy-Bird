@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bcx4yj3r5yw1q"]
+
+[ext_resource type="Script" uid="uid://cjhfh1aff5g32" path="res://ojo.gd" id="1_42dud"]
+[ext_resource type="Texture2D" uid="uid://q7vj3qpc54uc" path="res://assets/jefe.png" id="2_l1f77"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbfbu"]
+atlas = ExtResource("2_l1f77")
+region = Rect2(0, 0, 480, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a3alq"]
+atlas = ExtResource("2_l1f77")
+region = Rect2(480, 0, 480, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31rhd"]
+atlas = ExtResource("2_l1f77")
+region = Rect2(960, 0, 480, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p57al"]
+atlas = ExtResource("2_l1f77")
+region = Rect2(1440, 0, 480, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvstr"]
+atlas = ExtResource("2_l1f77")
+region = Rect2(0, 345, 480, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jva8u"]
+atlas = ExtResource("2_l1f77")
+region = Rect2(480, 345, 480, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tgn26"]
+atlas = ExtResource("2_l1f77")
+region = Rect2(960, 345, 480, 345)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dql6w"]
+atlas = ExtResource("2_l1f77")
+region = Rect2(1440, 345, 480, 345)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7mff1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbfbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a3alq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31rhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p57al")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvstr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jva8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tgn26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dql6w")
+}],
+"loop": 1,
+"name": &"seguir",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mff1"]
+size = Vector2(709.75, 529.125)
+
+[node name="ojo" type="CharacterBody2D" unique_id=817711583]
+script = ExtResource("1_42dud")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1496516441]
+position = Vector2(-300, -54)
+scale = Vector2(1.3986979, 1.5188406)
+sprite_frames = SubResource("SpriteFrames_7mff1")
+animation = &"seguir"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=101841088]
+position = Vector2(-299, -39)
+shape = SubResource("RectangleShape2D_7mff1")
