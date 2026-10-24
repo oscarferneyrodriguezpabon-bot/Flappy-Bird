@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://c2ueog065oq7j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7mff1"]
+size = Vector2(1024, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hy3li"]
+size = Vector2(1024, 64)
+
+[node name="suelo" type="Node2D" unique_id=1095895268]
+
+[node name="techo" type="StaticBody2D" parent="." unique_id=117056505]
+position = Vector2(512, 32)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="techo" unique_id=756012451]
+shape = SubResource("RectangleShape2D_7mff1")
+
+[node name="ColorRect" type="ColorRect" parent="techo" unique_id=746453623]
+offset_left = -512.0
+offset_top = -32.0
+offset_right = 512.0
+offset_bottom = 32.0
+color = Color(0.38431373, 0.03529412, 0.09019608, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="techo" unique_id=1997525256]
+offset_left = -512.0
+offset_top = 24.0
+offset_right = 512.0
+offset_bottom = 32.0
+
+[node name="piso" type="StaticBody2D" parent="." unique_id=550263304]
+position = Vector2(512, 800)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso" unique_id=1002198390]
+shape = SubResource("RectangleShape2D_hy3li")
+
+[node name="ColorRect" type="ColorRect" parent="piso" unique_id=2019629835]
+offset_left = -512.0
+offset_top = -32.0
+offset_right = 512.0
+offset_bottom = 32.0
+color = Color(0.38431373, 0.03529412, 0.09019608, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="piso" unique_id=2056889132]
+offset_left = -512.0
+offset_top = -32.0
+offset_right = 512.0
+offset_bottom = -24.0
+color = Color(0.11764706, 0.003921569, 0.03137255, 1)
