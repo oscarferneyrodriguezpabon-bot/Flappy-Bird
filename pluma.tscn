@@ -1,14 +1,68 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://43txstq8rxkd"]
 
-[ext_resource type="Texture2D" path="res://assets/pluma.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://dptdsccesapri" path="res://assets/pluma.png" id="1"]
 
 [sub_resource type="CircleShape2D" id="Forma"]
-radius = 14
+radius = 14.0
 
-[node name="Pluma" type="Area2D" groups=["monedas"]]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxhsp"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 130, 320)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cp4a8"]
+atlas = ExtResource("1")
+region = Rect2(130, 0, 130, 320)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojxjb"]
+atlas = ExtResource("1")
+region = Rect2(260, 0, 130, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ark5"]
+atlas = ExtResource("1")
+region = Rect2(390, 0, 130, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnxg6"]
+atlas = ExtResource("1")
+region = Rect2(520, 0, 130, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7013k"]
+atlas = ExtResource("1")
+region = Rect2(650, 0, 130, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m5r0x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxhsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cp4a8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojxjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ark5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnxg6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7013k")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 15.0
+}]
+
+[node name="Pluma" type="Area2D" unique_id=1129304327 groups=["monedas"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=870814894]
 shape = SubResource("Forma")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=45635828]
+modulate = Color(0.4519506, 0.63913625, 0.77262664, 1)
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_m5r0x")
+autoplay = "default"
+frame_progress = 0.5799483

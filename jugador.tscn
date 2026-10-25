@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bm1ccwhto81jx" path="res://assets/ave-re.png" id="2_cvhml"]
 [ext_resource type="Texture2D" uid="uid://c23sf0x74ros8" path="res://assets/Muerte pajaro.png" id="9_xwd11"]
 [ext_resource type="AudioStream" uid="uid://cuk66ay382aev" path="res://assets/aleteo.wav" id="a0"]
-[ext_resource type="AudioStream" uid="uid://bq2j52os6d5vb" path="res://assets/golpe.wav" id="a1"]
+[ext_resource type="AudioStream" uid="uid://8us0b7apgt1r" path="res://assets/golpe.wav" id="a1"]
 [ext_resource type="Script" uid="uid://b5g5u2trocqt7" path="res://jugador.gd" id="s"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_btb33"]
@@ -88,8 +88,8 @@ animation = &"morir"
 [node name="Aleteo" type="AudioStreamPlayer2D" parent="." unique_id=611385521]
 stream = ExtResource("a0")
 
-[node name="Golpe" type="AudioStreamPlayer" parent="." unique_id=1098825617]
-stream = ExtResource("a1")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1520542393]
 shape = SubResource("Forma")
+
+[node name="Golpe" type="AudioStreamPlayer" parent="." unique_id=591069013]
+stream = ExtResource("a1")
